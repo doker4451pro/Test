@@ -1,0 +1,8 @@
+﻿
+namespace Test
+{
+    class ListRandDeserializer
+    {
+
+    }
+}
