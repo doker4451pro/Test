@@ -1,29 +1,27 @@
 # Test
-1. Реализуйте функции сериализации и десериализации двусвязного списка, заданного следующим образом:
+1. Реализуйте функции сериализации и десериализации двусвязного списка, заданного следующим образом:class ListNode
+{
+    public ListNode Prev;
+    public ListNode Next;
+    public ListNode Rand; // произвольный элемент внутри списка
+    public string Data;
+}
 
-    class ListNode
+
+class ListRand
+{
+    public ListNode Head;
+    public ListNode Tail;
+    public int Count;
+
+    public void Serialize(FileStream s)
     {
-        public ListNode Prev;
-        public ListNode Next;
-        public ListNode Rand; // произвольный элемент внутри списка
-        public string Data;
     }
 
-
-    class ListRand
+    public void Deserialize(FileStream s)
     {
-        public ListNode Head;
-        public ListNode Tail;
-        public int Count;
-
-        public void Serialize(FileStream s)
-        {
-        }
-
-        public void Deserialize(FileStream s)
-        {
-        }
     }
+}
 
 
 
