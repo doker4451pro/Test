@@ -38,17 +38,17 @@ namespace Test
 
             for (int i = 0; i < listRand.Count-1; i++)
             {
-                AddToStringBuilder(node, sb);
+                AddToStringBuilderFrom(node, sb);
                 sb.Append(",\n");
                 node = node.Next;
             }
 
-            AddToStringBuilder(listRand.Tail, sb);
+            AddToStringBuilderFrom(listRand.Tail, sb);
 
             return sb.ToString();
         }
 
-        private void AddToStringBuilder(ListNode node,StringBuilder sb) 
+        private void AddToStringBuilderFrom(ListNode node,StringBuilder sb) 
         {
             sb.Append("{")
                 .Append($"Data: {node.Data},")

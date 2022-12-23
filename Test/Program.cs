@@ -8,7 +8,7 @@ namespace Test
         private static string path = "note.json";
         static void Main(string[] args)
         {
-            ListRand list=null;
+            ListRand list = new ListRand();
             Init(ref list);
 
             FileStream file = new FileStream(path,FileMode.OpenOrCreate);

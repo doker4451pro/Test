@@ -30,7 +30,14 @@ namespace Test
 
         public void Deserialize(FileStream s)
         {
-
+            using (s) 
+            {
+                byte[] buffer = new byte[s.Length];
+                s.Read(buffer);
+                string textFromFile= Encoding.Default.GetString(buffer);
+                ListRandCreator creator = new ListRandCreator(textFromFile);
+                creator.SetValue(this);
+            }
         }
     }
 }
